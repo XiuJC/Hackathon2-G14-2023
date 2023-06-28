@@ -1,0 +1,7 @@
+3
+The Secret Door
+The wall seems too weird, you try to push it but it has no use. You search your surroundings to find a line connecting the wall to a book on thebookshelves and pull it.The hidden door is unlocked and you keep on moving. and a huge empty jail. No one knows what has been contained here. 
+Stage 3 COMPLETED: The golem was tough, but it does not hold you back,  you remember why you like to fight at the first place,the adrenaline…, the exciting emotions…, you reminisce through those memories, there is only one difference, you feel tired easier as time goes by…You drag yourself into a tunnel pass the remnant of the golem…
+S3Wave1_desc.txt
+S3Wave2_desc.txt
+S3Wave3_desc.txt

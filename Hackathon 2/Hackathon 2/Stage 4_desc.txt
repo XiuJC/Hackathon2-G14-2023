@@ -1,0 +1,8 @@
+4
+The Cavern
+The tunnel keeps narrowing down and it is the only road. The spiky rocks look sharp and it will be horrible if you get caught in one of those. It is fortunate that you have a smaller body to go through that narrow hole at the end of the tunnel. What a huge cave, the sound of something breathing echoes in the cave, the sound is too large for an animal, and that does not sound good…
+Stage 4 COMPLETED The wyvern falls onto the ground. This reminds you of the journey that had ended years ago. You are relieved. You feel like this has been the last battle. Suddenly, you are haunted by an evil aura. You start to look for its origin in the huge cave. 
+S4Wave1_desc.txt
+S4Wave2_desc.txt
+S4Wave3_desc.txt
+S4Wave4_desc.txt
