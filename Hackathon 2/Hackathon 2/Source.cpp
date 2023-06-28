@@ -69,7 +69,7 @@ int main()
 		switch (play_choice) {
 		case 'n': case 'N': //A new play
 			//Print the prologue
-//			readFile("Prologue.txt");
+			readFile("Prologue.txt");
 			play_choice_record = 1;
 			break;
 		case 'c': case 'C':
