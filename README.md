@@ -20,7 +20,7 @@ You are recruited to investigate the truth behind this mystery.
 
 # Game Feature
 - Traditional Turn-based Combat
-- Dice Mechanic as RNG Driver
+- RNG Mechanic Providing Diverse Gameplay Experience
 - Multiple Endings
 - Auto-Saving Game Progress
 
