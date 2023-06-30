@@ -47,3 +47,7 @@ Inheritance is used between some classes. Boss is inherited from Enemy and BossM
 
 # How Linked List Play a Role in the Game
 Stage is a the linked list we used that contains Wave structure that contains Boss class and Enemy class.
+
+# Screenshots
+
+# Game Demo Video
