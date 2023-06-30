@@ -39,3 +39,5 @@ The game consists of several classes to define their respective objects.
 These class includes Player, Dice, Stage, Move, Enemy, Boss and BossMove.  
 
 Inheritance is used between some classes. Boss is inherited from Enemy and BossMove is inherited from Move.
+
+Stage is a the linked list we used that contains Wave structure that contains Boss class and Enemy class.
