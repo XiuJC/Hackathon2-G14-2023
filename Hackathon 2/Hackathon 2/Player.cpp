@@ -1,24 +1,27 @@
 #include "Player.h"
 #include <iostream>
+#include <chrono>
+#include <thread>
 using namespace std;
 
 Player :: Player(){
 	// initializing the base health and shield durability of the player
 	MAX_Health = 300; 
 	Health = 300;
-	ShieldDura = 50;
+	ShieldDura = 75;
 	DamageTaken = 0;
 	Concentrated = false;
 }
 
-void Player :: Attacked(double damage, Dice &d){
-	double BASE_DamageTakenratio = 0.5, ratio, BonusRatio;
+void Player :: Attacked(double damage, double d){
+	double BASE_DamageTakenratio = 0.5, ratio, BonusRatio = 0;
 	
 	// A shield creates damage resistance automatically whenever player is attacked.
 	// A D20 is rolled to see if the player manage to guard the attack.
 
-	d.roll();
-	switch (d.getValue()) {
+	int temp = static_cast<int>(d);
+
+	switch (temp) {
 		case 1:	BonusRatio = -0.5;			// if the dice rolled 1, player failed to 
 				break;						// guard and take the whole damage/
 		case 2: case 3: case 4: case 5: case 6:
@@ -30,21 +33,22 @@ void Player :: Attacked(double damage, Dice &d){
 		case 20:BonusRatio = 0.5;			// if the dice rolled 20, the player guarded
 				break;						// successfully and take no damage.
 	}
-	
+	// CJX: why dont just if d = 20, damage = 0, then else if hasShield true, do the above without ratio complicating things.
+	// Then if no Shield then take damage
 	ratio = BASE_DamageTakenratio + BonusRatio;
 
 	if (hasShield() == true){
 		DamageTaken = damage - (damage * ratio);
 		ShieldDura--;						// Shield durability loses 1 for every defend.
 	}
-	else if (hasShield() == false && d.getValue() == 20){
+	else if (hasShield() == false && d == 20){
 		DamageTaken = 0;					// even if the player lose the shield
 											// he can still have a chance to dodge attacks
 	}
 	else {
 		DamageTaken = damage;
 	}
-	
+	cout << " deals " << DamageTaken << " damage to you." << endl;
 	Health = Health - DamageTaken;			// update the player's health
 	
 }
@@ -55,6 +59,9 @@ void Player :: Cursed(){					// a Curse is a boss' move that deals true damage
 
 void Player :: Heal(){						// player will heal himself in certain condition.
 	Health += (MAX_Health / 10);
+	if (Health > MAX_Health) {
+		Health = MAX_Health;
+	}
 }
 
 void Player :: HealHalf(){					// player will fully recover from damage in
@@ -106,5 +113,16 @@ double Player :: getDamageTaken(){
 }
 
 void Player::displayHP(){
-	cout << "HP: " << Health << "/" << MAX_Health << endl;
+	cout << "OZEN HP: " << Health << "/" << MAX_Health << endl;
+	this_thread::sleep_for(std::chrono::seconds(1));
+}
+
+void Player::loadPlayerInfo(double hp, double maxhp, double durability) {
+	Health = hp;
+	MAX_Health = maxhp;
+	ShieldDura = durability;
+}
+
+void Player::displayPlayerInfo() {
+			cout << "HP: " << Health << "/" << MAX_Health << "\tShield Durability: " << ShieldDura << endl;
 }
