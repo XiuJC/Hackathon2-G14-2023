@@ -10,6 +10,8 @@ Game Title:
 REDEMPTION
 
 # Game Description
+This is a text-based RPG we built entirely in C++.
+
 In this game, you play as a dwarf warrior deeping into a dungeon.
 You are once a member in the hero party which had slained the evil dragon.
 After the journey ended, you had left from your party and enjoyed peaceful days.  
@@ -25,7 +27,10 @@ You are recruited to investigate the truth behind this mystery.
 - Auto-Saving Game Progress
 
 # How to Play
-During the combat, you will be asked to **ENTER YOUR MOVE's NAME** to use them.  
+To play this game, you have to download it. Open the .h and .cpp files on a C++ IDE, and link them in a project.  
+Run the program and have your time playing it.  
+
+P.S. During the combat, you will be asked to **ENTER YOUR MOVE's NAME** to use them.  
 These moves include  
 
 1. **AxeStrike**   --> A steady move dealing single-target damage to an enemy.  
