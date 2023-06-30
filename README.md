@@ -46,7 +46,10 @@ These class includes Player, Dice, Stage, Move, Enemy, Boss and BossMove.
 Inheritance is used between some classes. Boss is inherited from Enemy and BossMove is inherited from Move.
 
 # How Linked List Play a Role in the Game
-Stage is a the linked list we used that contains Wave structure that contains Boss class and Enemy class.
+Stage is a the linked list we used that contains Wave structure that act as nodes containing Boss class and Enemy class. 
+We use the Wave(Node) to store the Boss and Enemies of every wave in a stage. That is that Wave 1 contains 1 goblin, or Wave 3 contains 
+1 Wyvern(boss) for examples. With Wave, we can keep moving forward every time the wave ends to load the next Wave in a Stage. That is how
+Wave are used to make it simpler to load data of the enemies in the wave in stages of the game.
 
 # Screenshots
 
