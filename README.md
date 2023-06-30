@@ -18,7 +18,7 @@ One day, you ex-party members were on their mission to explore a dungeon and def
 For some reason, they had been trapped inside the dungeon.
 You are recruited to investigate the truth behind this mystery. 
 
-# Game Feature
+# Game Features
 - Traditional Turn-based Combat
 - RNG Mechanic Providing Diverse Gameplay Experience
 - Multiple Endings
