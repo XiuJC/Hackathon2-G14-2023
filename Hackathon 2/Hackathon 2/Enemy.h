@@ -12,11 +12,11 @@ class Enemy{
 	private:
 		string EnemyType;		// define the monster type of each enemy object
 		string ATKdescription;	// the description telling how the enemy attacks player
-		double Attack;				// enemy doesn't have move, so they own a fixed attack value
+		double Attack;			// enemy doesn't have move, so they own a fixed attack value
 		
 	protected:
 		double EHealth;			// enemy's HP
-		double EmaxHealth;			// starting HP of the enemies and bosses
+		double EmaxHealth;		// starting HP of the enemies and bosses
 		double DamageTaken;		// calculates how much actual damage taken from player's attack
 		
 	public:
@@ -29,7 +29,7 @@ class Enemy{
 														// protected member (EHealth)
 														// to Boss class
 		bool isDead();
-		void Attacked(double, Dice&);
+		void EnemyAttacked(double, double);
 		void setEnemyType(string);
 		void setATKdescription(string);
 		void setAttack(double);
@@ -41,7 +41,7 @@ class Enemy{
 		double getEmaxHealth() const;
 		double getEHealth() const;
 		void displayEnemyInfo();		// member function to display enemy info in battle
-		
+		void displayATKed();
 };
 
 #endif
