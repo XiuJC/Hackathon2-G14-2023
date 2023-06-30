@@ -33,11 +33,12 @@ These moves include
 3. **Guillotine**  --> A heavy move (has lower accuracy) dealing significant damage to an enemy.  
 4. **Concentrate** --> A status move that boosts your next move's power and accuracy.
 
-# Object-oriented concepts in the game
+# Object-oriented Concepts in the Game
 The game consists of several classes to define their respective objects.  
 
 These class includes Player, Dice, Stage, Move, Enemy, Boss and BossMove.  
 
 Inheritance is used between some classes. Boss is inherited from Enemy and BossMove is inherited from Move.
 
+# How Linked List Play a Role in the Game
 Stage is a the linked list we used that contains Wave structure that contains Boss class and Enemy class.
