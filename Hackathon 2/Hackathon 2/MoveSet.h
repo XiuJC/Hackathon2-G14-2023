@@ -25,6 +25,8 @@ class Move{
 		
 	public:
 		// constructor to define a player's move
+		Move();
+		~Move();
 		Move(const string&, const string&, double, double, bool, bool);
 
 		// overloading constructor to define a Boss' move that 
@@ -33,28 +35,22 @@ class Move{
 
 		string getName() const;
 		string getDescription() const;
+
 		double getAttack();
 		double getAccuracy();
+
 		bool getisAOE();
 		bool getisConcentrate();
+
 		void UpgradeMoveAttack();	// funtions to manage the player to
-		void UpgradeAcc();				// power up the moves
+		void UpgradeAcc();			// power up the moves
+		
+		void loadAttack(double);
+		void loadAccuracy(double);
+		void loadAaA(double, double);
+		void displayMoveDesc();
+		void displayMoveHorizontally();
+		
 };
-/*
-class MoveSet{
-	private:
-		struct moveNode{
-			Move move;
-			moveNode *next;
-			moveNode *back;
-		};
-		moveNode *first;
-		moveNode *last;
-	
-	public:
-		MoveSet();
-		bool isFull();
-		void addMove(Move);
-};
-*/
+
 #endif
