@@ -8,9 +8,9 @@ void storeFile(){
 	ofstream write;
 	//TITLE
 	write.open("Title.txt");
-	write << "										REDEMPTION" << endl;
-	write << "		Welcome to REDEMPTION, a game that you play as a retired dwarf warrior " << endl;
-	write << "			and try to explore a dark dungeon and fight off monsters." << endl; 
+	write << "                     REDEMPTION" << endl;
+	write << "Welcome to REDEMPTION, a game that you play as a retired dwarf warrior " << endl;
+	write << "	and try to explore a dark dungeon and fight off monsters." << endl; 
 	write.close();
 
 	//PROLOGUE
@@ -47,14 +47,14 @@ void storeFile(){
 
 	write.open("Stage1_desc.txt");
 	write << "It is cold and dark here. You with the light source from your torch seems... alone." << endl;
-	write << " You can hear that the heavy door at your back is slowly shutting. Besides the dripping " << endl;
+	write << "You can hear that the heavy door at your back is slowly shutting. Besides the dripping " << endl;
 	write << "water sound echoing in the hallway, you can also hear a small giggling sound in front..." << endl;
 	write.close();
 
 	write.open("Stage1_ending.txt");
 	write << "                                    Stage 1 COMPLETED" << endl;
 	write << "Look like you clear the area, you rekindle the torches on the walls,the entrance is much brighter  " << endl;
-	write << "now.The long and narrow hallway leads you to the staircase going downstairs,it is looking quite " << endl;
+	write << "now. The long and narrow hallway leads you to the staircase going downstairs, it is looking quite " << endl;
 	write << "dangerous down there." << endl;
 	write.close();
 
@@ -334,7 +334,7 @@ void storeFile(){
 	write.open("FaustEnding.txt");
 	write << "Barely winning the fight, Ozen turns back, stepping to the exit of the room. "
 		<< "He still cannot believe that even the strongest among the party also fell to the curse." << endl;
-	write << "Faust : Ozen......\n\n A familiar voice grabs the Ozen�s attention. " << endl;
+	write << "Faust : Ozen......\n\n A familiar voice grabs his attention. " << endl;
 	write << "Ozen looks at the hero lying on the floor. " 
 		<< "He notices that the dark aura is leaving the body of the man. " << endl << endl;
 	write << "Faust: Thanks, mate...\n Said the man while trying to stand up on his own but falls with his face directly onto the floor." << endl;
