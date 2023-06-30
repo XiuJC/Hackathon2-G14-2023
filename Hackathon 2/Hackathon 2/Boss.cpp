@@ -1,5 +1,8 @@
 #include "Boss.h"
 #include <iostream>
+#include <fstream>
+#include <chrono>
+#include <thread>
 using namespace std;
 
 Boss :: Boss(const string &bossname, const string &d, double hp) : Enemy(hp){
@@ -17,13 +20,14 @@ Boss :: Boss(const string &bossname, const string &d, double hp) : Enemy(hp){
 	return *this;
 }
 */
-void Boss :: BossAttacked(double damage, Dice &d){
-	double BASE_DamageTakenratio = 0.5, ratio, BonusRatio;
+void Boss :: BossAttacked(double damage, double d){
+	double BASE_DamageTakenratio = 0.5, ratio, BonusRatio = 0;
 	
 	// Damage resistance similar to player's
 
-	d.roll();
-	switch (d.getValue()) {
+	int temp = static_cast<int>(d);
+
+	switch (temp) {
 		case 20:	BonusRatio = -0.5;
 					break;
 		case 11: case 12: case 13: case 14: case 15: 
@@ -34,8 +38,9 @@ void Boss :: BossAttacked(double damage, Dice &d){
 										break;
 		case 1:BonusRatio = 0.5;
 				break;
+		default:
+			break;
 	}
-	
 	ratio = BASE_DamageTakenratio + BonusRatio;
 	
 	// bosses will have damage resistance similar to player
@@ -59,11 +64,19 @@ void Boss::displayBossDescription() {
 	cout << BossDescription << endl;
 }
 
-void Boss::setBoss(string bossname, string d, double hp){
+void Boss::setBossInfo(string bossname, string d, double hp){
 	BossName = bossname;
 	BossDescription = d;
 	EmaxHealth = hp;
 	EHealth = hp;	
+}
+
+void Boss::setBossEnding(string filename){ //To read (Boss).txt
+	BossEnding = filename;
+}
+void Boss::setBoss(string bossname, string d, double hp, string filename) {
+	setBossInfo(bossname, d, hp);
+	setBossEnding(filename);
 }
 
 bool Boss :: RAGE() {
@@ -71,6 +84,24 @@ bool Boss :: RAGE() {
 	else return false;								// when HP goes half.
 }
 
+void Boss::displayBossInfo(){
+	cout << BossName << endl;
+	double currentHP = Enemy::getEHealth();
+	double totalHP = Enemy::getEmaxHealth();
+	cout << "HP: " << currentHP << "/" << totalHP << endl;
+}
+
+void Boss::displayBossEnding(){
+	ifstream readBE;
+	string line;
+	readBE.open(BossEnding);
+	while (getline(readBE, line)) {
+		cout << line << endl;
+		this_thread::sleep_for(std::chrono::seconds(1));
+	}
+	readBE.close();
+	
+}
 void Boss::displayBossInfo(){
 	cout << BossName << endl;
 	double currentHP = Enemy::getEHealth();
