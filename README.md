@@ -30,7 +30,7 @@ You are recruited to investigate the truth behind this mystery.
 To play this game, you have to download it. Open the .h and .cpp files on a C++ IDE, and link them in a project.  
 Run the program and have your time playing it.  
 
-P.S. During the combat, you will be asked to **ENTER YOUR MOVE's NAME** to use them.  
+**P.S.** During the combat, you will be asked to **ENTER YOUR MOVE's NAME** to use them.  
 These moves include  
 
 1. **AxeStrike**   --> A steady move dealing single-target damage to an enemy.  
