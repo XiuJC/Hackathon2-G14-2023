@@ -25,6 +25,7 @@ You are recruited to investigate the truth behind this mystery.
 - RNG Mechanic Providing Diverse Gameplay Experience
 - Multiple Endings
 - Auto-Saving Game Progress
+- Winner board Celebrating Victories
 
 # How to Play
 To play this game, you have to download it. Open the .h and .cpp files on a C++ IDE, and link them in a project.  
