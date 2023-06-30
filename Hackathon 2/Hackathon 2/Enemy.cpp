@@ -1,5 +1,7 @@
 #include "Enemy.h"
 #include <iostream>
+#include <thread>
+#include <chrono>
 using namespace std;
 
 Enemy::Enemy() {
@@ -62,7 +64,7 @@ bool Enemy :: isDead(){
 	else return false;
 }
 
-void Enemy :: Attacked(double damage, Dice &d){
+void Enemy :: EnemyAttacked(double damage, double d6){
 	double BASE_DamageTakenratio = 0.0, ratio, BonusRatio=0;
 	
 	// non-boss enemies does not have damage resistance like player and bosses
@@ -70,8 +72,9 @@ void Enemy :: Attacked(double damage, Dice &d){
 	// there are each 6 out of 1 chance every single hit
 	// for enemies to either have 50% damage reduction or 50% extra damage taken
 
-	d.roll();
-	switch (d.getValue()) {
+	int temp = static_cast<int>(d6);
+
+	switch (temp) {
 		case 1:	BonusRatio = 0.5;
 				break;
 		case 2: case 3: case 4: case 5 : BonusRatio = 0;
@@ -82,7 +85,7 @@ void Enemy :: Attacked(double damage, Dice &d){
 	ratio = BASE_DamageTakenratio + BonusRatio;
 	
 	DamageTaken = damage - (damage * ratio);
-	
+	cout << "Enemy lose " << DamageTaken << "HP.\n";
 	EHealth -= DamageTaken;
 }
 
@@ -128,5 +131,11 @@ double Enemy :: getEHealth() const{
 
 void Enemy::displayEnemyInfo() {
 	cout << EnemyType << endl;
+	this_thread::sleep_for(std::chrono::seconds(1));
 	cout << "HP: " << EHealth << "/" << EmaxHealth << endl;
+	this_thread::sleep_for(std::chrono::seconds(1));
+}
+
+void Enemy::displayATKed() {
+	cout << ATKdescription << endl;
 }
