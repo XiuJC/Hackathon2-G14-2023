@@ -1,5 +1,6 @@
 #ifndef BOSSMOVE_H
 #define BOSSMOVE_H
+#include "MoveSet.h"
 using namespace std;
 
 class BossMove : public Move {
@@ -8,11 +9,22 @@ class BossMove : public Move {
 		double Base_AttackValue;
 		
 	public:
+		BossMove();
+		~BossMove();
 		BossMove(const string&, const string&, double, bool);
 		bool getisCurse();
 		void inRage();
 		bool rageBoosted();
-		
+		void displayBossATKed();
+		BossMove& operator=(const BossMove& right) {
+			if (this != &right) {
+				MoveName = right.MoveName;
+				Description = right.Description;
+				this->AttackValue = right.AttackValue; \
+					this->isCurse = right.isCurse;
+			}
+			return *this;
+		}
 };
 
 #endif
