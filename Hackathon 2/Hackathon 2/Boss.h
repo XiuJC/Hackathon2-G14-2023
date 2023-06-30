@@ -9,7 +9,8 @@ class Boss: public Enemy{
 	private:
 		string BossName;
 		string BossDescription;
-		
+		string BossEnding;
+
 	public:
 		Boss(): Enemy() { BossName = " "; BossDescription = " "; }
 		Boss(const string&, const string&, double);
@@ -19,16 +20,20 @@ class Boss: public Enemy{
 				BossDescription = right.BossDescription;
 				this->setEHealth(right.Enemy::getEHealth());
 				this->setEmaxHealth(right.Enemy::getEmaxHealth());
+				this->BossEnding = right.BossEnding;
 			}
 			return *this;
-		}//;
-		void BossAttacked(double, Dice&);	//
+		}
+		void BossAttacked(double, double);	//
 		string getBossName();
 		void displayBossDescription();
-		void setBoss(string, string, double);
+		void setBossInfo(string, string, double);
+		void setBossEnding(string);
+		void setBoss(string, string, double, string);
 		bool RAGE();					// boss' status, will triggered when HP lower than 
 										// half of maximum HP, gaining all moves double attack
 		void displayBossInfo();
+		void displayBossEnding();
 };
 
 #endif
