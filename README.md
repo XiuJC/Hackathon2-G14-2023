@@ -14,7 +14,7 @@ In this game, you play as a dwarf warrior deeping into a dungeon.
 You are once a member in the hero party which had slained the evil dragon.
 After the journey ended, you had left from your party and enjoyed peaceful days.  
 
-One day, you ex-party members were on their mission to explore a dungeon and defeat a Lich living inside.
+One day, your ex-party members were on their mission to explore a dungeon and defeat a Lich living inside.
 For some reason, they had been trapped inside the dungeon.
 You are recruited to investigate the truth behind this mystery. 
 
