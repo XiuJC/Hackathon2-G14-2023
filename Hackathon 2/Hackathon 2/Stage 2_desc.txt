@@ -1,7 +1,0 @@
-2
-The Basement
-Someone was here. There are bones and more bones on the ground, and a huge empty jail. No one knows what has been contained here. Animal? People? Monster? At least they do not need to face the devil right before your eyes right now. You can sense the rage inside its eyes...
-Stage 2 COMPLETED: You fight through the monster waves and rush into a room. Now you can take a rest for a short moment and all you can only think is keep going on...
-S2Wave1_desc.txt
-S2Wave2_desc.txt
-S2Wave3_desc.txt

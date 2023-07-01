@@ -1,6 +1,0 @@
-3
-0
-3
-Kobold.txt
-Goblin.txt
-Kobold.txt

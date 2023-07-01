@@ -1,5 +1,0 @@
-5
-The Final Battle
-Stage5_desc.txt
-None.
-S5Wave1_desc.txt

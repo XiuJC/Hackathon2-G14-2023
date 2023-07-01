@@ -1,7 +1,0 @@
-3
-The Secret Door
-Stage3_desc.txt
-Stage3_ending.txt
-S3Wave1_desc.txt
-S3Wave2_desc.txt
-S3Wave3_desc.txt

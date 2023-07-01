@@ -1,6 +1,0 @@
-﻿  BossMove.cpp
-  Source.cpp
-  Generating Code...
-C:\Users\User\source\repos\Hackathon 2\Hackathon 2\Source.cpp(1255): warning C4715: 'battleBoss': not all control paths return a value
-C:\Users\User\source\repos\Hackathon 2\Hackathon 2\Source.cpp(826): warning C4715: 'battleEnemy': not all control paths return a value
-  Hackathon 2.vcxproj -> C:\Users\User\source\repos\Hackathon 2\x64\Debug\Hackathon 2.exe

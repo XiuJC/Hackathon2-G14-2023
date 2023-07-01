@@ -1,4 +1,0 @@
-Baryard
-A young man is ready for battle. There is no other weapons would be more familiar to you than the halberd on his hand...
-1000
-BaryardEnding.txt
