@@ -1,8 +1,0 @@
-4
-The Cavern
-Stage4_desc.txt
-Stage4_ending.txt
-S4Wave1_desc.txt
-S4Wave2_desc.txt
-S4Wave3_desc.txt
-S4Wave4_desc.txt
