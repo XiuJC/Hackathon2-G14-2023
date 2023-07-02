@@ -1,7 +1,0 @@
-2
-The Basement
-Stage2_desc.txt
-Stage2_ending.txt
-S2Wave1_desc.txt
-S2Wave2_desc.txt
-S2Wave3_desc.txt
