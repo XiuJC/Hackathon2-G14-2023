@@ -149,20 +149,6 @@ int main(){
 	cout << endl;
 	
 	if (test == "test") {
-		bool win = true;
-		Boss mainboss;
-		BossMove Bmove[3];
-		Stage stage(4);
-		int WaveIndex = 4;
-		stage.copyWaveBoss(WaveIndex, mainboss);
-		if (mainboss.getBossName() == "Wyvern") { //Choose their skill for the respective boss
-			Bmove[0] = Claw;
-			Bmove[1] = Bite;
-			Bmove[2] = Dive;
-		}
-		stage.searchWave(WaveIndex);
-		battleBoss(mainboss, AxeS, Swipe, Guillotine, Concentrate, Ozen, Bmove[0], Bmove[1], Bmove[2], win);
-
 		return 0;
 	}
 
@@ -490,6 +476,7 @@ void checkStageAndWave(int& stageIndex, int& waveIndex) {
 void displayWinnerBoard() {
 	ifstream displayBoard;
 	string readboard;
+	cout << "Winner: \n";
 	displayBoard.open("WinnerBoard.txt");
 	while (getline(displayBoard, readboard)) {
 		cout << readboard << endl;
